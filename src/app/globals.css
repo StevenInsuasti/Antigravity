@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .hero-gradient {
+    background: linear-gradient(135deg, #111111 0%, #000000 100%);
+  }
+  .review-perspective {
+    perspective: 1000px;
+  }
+  .rotate-y-left {
+    transform: rotateY(25deg) scale(0.9);
+    opacity: 0.5;
+  }
+  .rotate-y-right {
+    transform: rotateY(-25deg) scale(0.9);
+    opacity: 0.5;
+  }
+}
